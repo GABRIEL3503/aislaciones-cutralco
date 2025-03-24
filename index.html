@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aislaciones Cutral-Có</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Archivo", sans-serif;
+    }
+    #beneficios {
+  background: url('img/fondo\ 1.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#beneficios h2 {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.beneficio {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+      background-color: #4D4D4D;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 100%;
+      background: #fcfcfc;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #4D4D4D;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 20px 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Hero */
+    #hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 120px;
+      min-height: 100vh;
+      background: #f8f9fa;
+    }
+
+    #hero .hero-logo {
+      max-width: 310px;
+      margin-bottom: 30px;
+    }
+
+    #hero .icons {
+      display: flex;
+      gap: 12x;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    #hero .icons img {
+      width: 50px;
+      height: 50px;
+    }
+.logo img{
+    width: 190px;
+}
+    #scroll-down {
+        margin-top: 44px;
+      width: 48px;
+      height: 48px;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    #que-es {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+#que-es h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #555;
+}
+
+#que-es h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #222;
+}
+
+#que-es .contenido {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+#propiedades {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#propiedades h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.propiedad {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.propiedad-img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.propiedad-texto p {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"> <img src="img/LogoNavBlanco.png" alt=""> </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Beneficios</a></li>
+        <li><a href="#nosotros">¿Que es?</a></li>
+        <li><a href="#contacto">Propiedades</a></li>
+        <li><a href="#contacto">Como se aplica</a></li>
+        <li><a href="#contacto">Especificaciones Tecnicas</a></li>
+
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section id="hero">
+    <img src="img/LogoSinFondo.png" alt="Logo" class="hero-logo" data-aos="zoom-in" />
+    <div class="icons">
+      <img src="img/IconoFaceGris.png" alt="Icono 1" data-aos="fade-up" data-aos-delay="100">
+      <img src="img/IconoUbiGris.png" alt="Icono 2" data-aos="fade-up" data-aos-delay="200">
+      <img src="img/IconoWppGris.png" alt="Icono 3" data-aos="fade-up" data-aos-delay="300">
+      <img src="img/IconoIGGris.png" alt="Icono 4" data-aos="fade-up" data-aos-delay="400">
+    </div>
+    <img src="img/FlechaInicio.png" alt="Scroll down" id="scroll-down" />
+  </section>
+
+  <section id="beneficios">
+    <h2 data-aos="fade-up">5 BENEFICIOS DE ELEGIR CELULOSA PROYECTADA</h2>
+    <p class="beneficio" data-aos="fade-up" data-aos-delay="100">Superioridad en aislación <br> térmica y acústica.
+    </p>
+    <p class="beneficio" data-aos="fade-up" data-aos-delay="200">Ahorro energético elevado.</p>
+    <p class="beneficio" data-aos="fade-up" data-aos-delay="300">Alta resistencia al fuego. No propaga <br>
+        la llama ni emite humos tóxicos.
+        </p>
+    <p class="beneficio" data-aos="fade-up" data-aos-delay="400">Regula humedad y condensación.</p>
+    <p class="beneficio" data-aos="fade-up" data-aos-delay="500">Rápida instalación y excelente <br>
+        relación costo-beneficio.</p>
+  </section>
+  <section id="que-es">
+    <h5 data-aos="fade-up">¿Qué es la celulosa proyectada</h5>
+    <h2 data-aos="fade-up" data-aos-delay="100">Aislamiento de celulosa</h2>
+    <div class="contenido" data-aos="fade-up" data-aos-delay="200">
+      <p>
+        Es un tipo de aislamiento <strong>térmico y acústico</strong>, recomendado para proteger techos, paredes y pisos de manera ecológica; 
+        consiste en <strong>papel reciclado tratado con ácido bórico</strong> para darle propiedades 
+        <strong>ignífugas, fungicidas e insecticidas</strong>.
+      </p>
+      <br />
+      <p>
+        Es un potente aislante invernal, posiblemente el mejor aislante estival debido a su capacidad de almacenamiento de calor. 
+        Además, debido a su elevada porosidad, cumple una excelente función como aislante acústico.
+      </p>
+    </div>
+  </section>
+  <section id="propiedades">
+    <h5 data-aos="fade-up">Propiedades</h5>
+  
+    <div class="propiedad" data-aos="fade-up" data-aos-delay="100">
+      <img src="img/PropTermica.webp" alt="Propiedad térmica" class="propiedad-img">
+      <div class="propiedad-texto">
+        <p><strong>Contra el frío.</strong> Gracias a su densidad, se adapta a cualquier cavidad, evitando el movimiento de aire entre paredes y bloqueando la entrada de frío al interior del ambiente.</p>
+        <p><strong>Contra el calor.</strong> Su composición transpirable permite mantener una temperatura de confort por más tiempo en verano, reduciendo la necesidad de aire acondicionado y evitando el sobrecalentamiento.</p>
+        <p><strong>Mayor ahorro energético.</strong> En resumen, el aislamiento de celulosa reduce significativamente el consumo de energía, manteniendo el interior más cálido en invierno y más fresco en verano. Es ideal para climas extremos.</p>
+      </div>
+    </div>
+  
+    <div class="propiedad" data-aos="fade-up" data-aos-delay="200">
+      <img src="img/PropAcustica.webp" alt="Propiedad acústica" class="propiedad-img">
+      <div class="propiedad-texto">
+        <p><strong>Bloquea el paso del sonido.</strong> Donde el aire fluye, el sonido pasa. La densidad de la celulosa y su capacidad para rellenar el vacío la convierte en un aislante acústico superior en comparación con la fibra de vidrio y otros aislantes disponibles en el mercado.</p>
+        <p>Su adaptabilidad permite aislar acústicamente paredes y pisos como también techos reduciendo significativamente el ruido en zonas de vientos.</p>
+      </div>
+    </div>
+  
+    <div class="propiedad" data-aos="fade-up" data-aos-delay="300">
+      <img src="img/PropIgnifuga.webp" alt="Propiedad ignífuga" class="propiedad-img">
+      <div class="propiedad-texto">
+        <p><strong>No se inflama, no propaga llamas y no se derrite.</strong>  El aporte 
+          de sales bóricas durante el proceso de fabricación de la celulosa le 
+          otorga propiedades ignífugas. Por lo tanto, cuando las sales bóricas 
+          entran en contacto con una llama o con un calor importante, separa 
+          moléculas de agua carbonizando la superficie de la celulosa. Este fe
+          nómeno impide la propagación del fuego. Con una clasificación de 
+          fuego clase A, es un 57% mejor en resistencia al fuego que otros 
+          tipos de aislamiento. <br>
+          No contamina y no emite ningún tipo de gas o sustancia tóxica. Aislar 
+          con celulosa protege perfectamente ambientes tanto residenciales 
+          como industriales, y la seguridad de las personas que los habitan.</p>
+      </div>
+    </div>
+  
+    <div class="propiedad" data-aos="fade-up" data-aos-delay="500">
+      <img src="img/PropFungicida.webp" alt="Propiedad fungicida" class="propiedad-img">
+      <div class="propiedad-texto">
+        <p><strong>Eficacia frente a los hongos.</strong> La capacidad de la celulosa para regular la humedad la convierte en un excelente material para evitar la propagación de hongos, contribuyendo a la creación de espacios ambientalmente más seguros y saludables.</p>
+      </div>
+    </div>
+    
+    <div class="propiedad" data-aos="fade-up" data-aos-delay="600">
+      <img src="img/PropEcologica.webp" alt="Propiedad ecológica" class="propiedad-img">
+      <div class="propiedad-texto">
+        <p><strong>Sustentable y reciclable.</strong> El aislamiento de celulosa insuflada es una opción ecológica y sostenible, ya que se fabrica a partir de material reciclado y requiere mínima energía en su producción. Su proceso de fabricación genera bajas emisiones de CO₂, lo que lo convierte en uno de los aislantes más ecológicos del mercado.</p>
+        <p>Además, su composición permite que mantenga su forma y propiedades a lo largo del tiempo, sin apelmazarse, menguar ni asentarse, asegurando una eficiencia duradera. Su comportamiento natural es similar al de la madera, proporcionando un aislamiento térmico eficaz y sostenible.</p>
+      </div>
+    </div>
+    
+    <div class="propiedad" data-aos="fade-up" data-aos-delay="700">
+      <img src="img/PropAntiplagas.webp" alt="Evita roedores e insectos" class="propiedad-img">
+      <div class="propiedad-texto">
+        <p><strong>Evita el anidamiento de roedores o insectos.</strong> Debido a las sales bóricas que posee el producto, que es un componente habitual y muy eficaz en el tratamiento de plagas, los roedores nunca harán su nido en la celulosa. Una característica más que aporta a la buena salud y seguridad de los ambientes.</p>
+      </div>
+    </div>
+    
+    </div>
+  </section>
+    
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('show');
+    });
+
+    document.getElementById('scroll-down').addEventListener('click', () => {
+      document.getElementById('beneficios').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
