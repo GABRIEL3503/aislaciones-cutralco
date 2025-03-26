@@ -225,7 +225,7 @@ p{
   margin: 0 auto 60px;
 }
 .contenido {
-  text-align: justify;
+  text-align: left    ;
 }
 .propiedad-img {
   width: 100%;
@@ -243,6 +243,42 @@ p{
 #beneficios p{
   margin-bottom: 64px;
 }
+#como-se-aplica {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+#como-se-aplica h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.como-bloque {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.como-img {
+  width: 100%;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+.como-texto {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.como-texto p {
+  margin-bottom: 14px;
+}
+
   </style>
 </head>
 <body>
@@ -366,7 +402,35 @@ p{
     
     </div>
   </section>
-    
+  <section id="como-se-aplica">
+    <h5 data-aos="fade-up">Cómo se aplica</h5>
+  
+    <div class="como-bloque" data-aos="fade-up" data-aos-delay="100">
+      <img src="img/Aplicacion.webp" alt="Aplicación sin obra" class="como-img">
+  
+      <div class="como-texto">
+        <p>
+          El aislamiento de celulosa proyectada se aplica de forma sencilla y sin necesidad de obras.
+          Mediante un proceso de proyección, el material se distribuye uniformemente en las cavidades de muros, techos y entrepisos, adaptándose perfectamente a cada espacio.
+        </p>
+        <p>
+          <strong>Instalación rápida.</strong> Se completa en pocas horas.
+        </p>
+        <p>
+          <strong>Sin obra ni escombros.</strong> No requiere desmontar paredes ni realizar grandes intervenciones.
+        </p>
+        <p>
+          <strong>Eficiencia inmediata.</strong> Proporciona aislamiento térmico y acústico al instante.
+        </p>
+        <p>
+          Una solución práctica y efectiva para mejorar el confort de cualquier ambiente sin complicaciones.
+        </p>
+      </div>
+  
+      <img src="img/AntesYdespues.webp" alt="Aplicación proyectada" class="como-img" data-aos="fade-up" data-aos-delay="200">
+    </div>
+  </section>
+  
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
