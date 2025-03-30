@@ -19,25 +19,60 @@
     body {
         font-family: "Archivo", sans-serif;
     }
-    #beneficios {
-  color: #3f3f3f;
+   /* Estilo para sección de beneficios */
+#beneficios {
+  background: url('img/fondo-1.jpg') no-repeat center center/cover;
+  color: #fff;
   text-align: center;
   padding: 100px 20px;
 }
 
+/* Título */
 #beneficios h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 40px;
-  font-weight: 300;
+  font-weight: 700;
 }
 
+/* Contenedor de cada beneficio */
 .beneficio {
+  display: flex
+;
+    flex-direction: column;
+    align-items: center;
   max-width: 800px;
-  margin: 0 auto 20px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* Estilo para los íconos */
+.beneficio-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 12px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Estilo para los párrafos de beneficios */
+.beneficio p {
   font-size: 1.4rem;
   line-height: 1.5;
   font-weight: 900;
+  color: 3f3f3f;
 }
+
+/* Animación opcional para que los íconos aparezcan suavemente */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
     header {
       display: flex;
@@ -511,16 +546,33 @@ p{
 
   <section id="beneficios">
     <h2 data-aos="fade-up">5 BENEFICIOS DE ELEGIR CELULOSA PROYECTADA</h2>
-    <p class="beneficio" data-aos="fade-up" data-aos-delay="100">Superioridad en aislación <br> térmica y acústica.
-    </p>
-    <p class="beneficio" data-aos="fade-up" data-aos-delay="200">Ahorro energético elevado.</p>
-    <p class="beneficio" data-aos="fade-up" data-aos-delay="300">Alta resistencia al fuego.<br>No propaga 
-        la llama<br>ni emite humos tóxicos.
-        </p>
-    <p class="beneficio" data-aos="fade-up" data-aos-delay="400">Regula humedad y condensación.</p>
-    <p class="beneficio" data-aos="fade-up" data-aos-delay="500">Rápida instalación y excelente <br>
-        relación costo-beneficio.</p>
+  
+    <div class="beneficio" data-aos="fade-up" data-aos-delay="100">
+      <img src="img/Ben1.png" alt="Ícono térmica" class="beneficio-icon">
+      <p>Superioridad en aislación <br> térmica y acústica.</p>
+    </div>
+  
+    <div class="beneficio" data-aos="fade-up" data-aos-delay="200">
+      <img src="img/Ben2.png" alt="Ícono ahorro energético" class="beneficio-icon">
+      <p>Ahorro energético elevado.</p>
+    </div>
+  
+    <div class="beneficio" data-aos="fade-up" data-aos-delay="300">
+      <img src="img/Ben3.png" alt="Ícono resistencia al fuego" class="beneficio-icon">
+      <p>Alta resistencia al fuego.<br>No propaga la llama<br>ni emite humos tóxicos.</p>
+    </div>
+  
+    <div class="beneficio" data-aos="fade-up" data-aos-delay="400">
+      <img src="img/Ben4.png" alt="Ícono humedad" class="beneficio-icon">
+      <p>Regula humedad y condensación.</p>
+    </div>
+  
+    <div class="beneficio" data-aos="fade-up" data-aos-delay="500">
+      <img src="img/Ben5.png" alt="Ícono instalación rápida" class="beneficio-icon">
+      <p>Rápida instalación y excelente <br> relación costo-beneficio.</p>
+    </div>
   </section>
+  
   <section id="que-es">
     <h5 data-aos="fade-up">¿Qué es la celulosa proyectada</h5>
     <h2 data-aos="fade-up" data-aos-delay="100">Aislamiento de celulosa</h2>
