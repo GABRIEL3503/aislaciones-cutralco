@@ -20,8 +20,7 @@
         font-family: "Archivo", sans-serif;
     }
     #beneficios {
-  background: url('img/fondo\ 1.jpg') no-repeat center center/cover;
-  color: #fff;
+  color: #3f3f3f;
   text-align: center;
   padding: 100px 20px;
 }
@@ -45,7 +44,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 20px;
-      background-color: #4D4D4D;
+      background-color: #0744a4d4
+      ;
       position: fixed;
       width: 100%;
       top: 0;
@@ -110,7 +110,7 @@
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #4D4D4D;
+        background-color: #414141ed;
         flex-direction: column;
         width: 100%;
         display: none;
@@ -168,7 +168,8 @@ p{
   color:  #4D4D4D ;
 }
 #beneficios p{
-  color: #F8F8F8;
+  font-weight: 600;
+  color: #1A1A1A;
 }
 #que-es .contenido {
   max-width: 700px;
@@ -334,56 +335,27 @@ p{
 .btn-resena:hover {
   background: #555;
 }
+/* Estilos generales del hero */
 #hero {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
+/* Contenedor Swiper */
 .swiper-container {
   width: 100%;
   height: 100%;
-}
-
-.hero-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-content {
-  margin-top: 240px;
-  display: flex
-;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  color: #fff;
-}
-
-.hero-content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 1rem;
-}
-/* Corrección para Swiper */
-.swiper-container {
-  width: 100%;
-  height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
-
+/* Wrapper y slides */
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
 
 .swiper-slide {
   width: 100%;
@@ -394,10 +366,10 @@ p{
   background-position: center;
 }
 
-/* Ajustes para hero-content */
+/* Contenido del hero centrado */
 .hero-content {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -407,13 +379,51 @@ p{
   color: #fff;
 }
 
+/* Estilo de título */
 .hero-content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
 }
 
+/* Estilo de párrafo opcional */
 .hero-content p {
   font-size: 1rem;
+}
+
+/* Logo fijo centrado en el hero */
+.logo-parallax {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+}
+
+/* Estilo del logo */
+.hero-logo {
+  width: 180px;
+  height: auto;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Animación de aparición suave */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de zoom en el logo al hacer scroll */
+.scrolled .hero-logo {
+  transform: scale(0.9);
+  opacity: 0.8;
 }
 
 /* Corrección para navegación y paginación Swiper */
@@ -451,30 +461,43 @@ p{
   </header>
 
   <section id="hero">
+    <div class="logo-parallax">
+      <img src="img/LogoBlancoSinFondo.png" alt="Logo" class="hero-logo">
+    </div>
+  
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
-        <div class="swiper-slide hero-slide" style="background-image: url('img/HeroPrueba.webp');">
+        <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 30.webp');">
           <div class="hero-content">
-            <h2>Bienvenidos a Aislamientos Cutral Có</h2>
           </div>
         </div>
   
         <!-- Slide 2 -->
-        <div class="swiper-slide hero-slide" style="background-image: url('img/HeroPrueba.webp');">
+        <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 32.webp');">
           <div class="hero-content">
-            <h2>Máxima protección térmica y acústica</h2>
           </div>
         </div>
   
         <!-- Slide 3 -->
-        <div class="swiper-slide hero-slide" style="background-image: url('img/hero3.jpg');">
+        <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 33.webp');">
           <div class="hero-content">
-            <h2>Solución sustentable y reciclable</h2>
           </div>
         </div>
       </div>
-  
+     <!-- Slide 3 -->
+     <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 34.webp');">
+      <div class="hero-content">
+      </div>
+    </div>
+       <!-- Slide 3 -->
+       <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 35.webp.webp');">
+        <div class="hero-content">
+          <h2>Solución sustentable y reciclable</h2>
+        </div>
+      </div>
+    </div>
+  </div>
       <!-- Paginación -->
       <div class="swiper-pagination"></div>
   
@@ -484,14 +507,15 @@ p{
     </div>
   </section>
   
+  
 
   <section id="beneficios">
     <h2 data-aos="fade-up">5 BENEFICIOS DE ELEGIR CELULOSA PROYECTADA</h2>
     <p class="beneficio" data-aos="fade-up" data-aos-delay="100">Superioridad en aislación <br> térmica y acústica.
     </p>
     <p class="beneficio" data-aos="fade-up" data-aos-delay="200">Ahorro energético elevado.</p>
-    <p class="beneficio" data-aos="fade-up" data-aos-delay="300">Alta resistencia al fuego. No propaga <br>
-        la llama ni emite humos tóxicos.
+    <p class="beneficio" data-aos="fade-up" data-aos-delay="300">Alta resistencia al fuego.<br>No propaga 
+        la llama<br>ni emite humos tóxicos.
         </p>
     <p class="beneficio" data-aos="fade-up" data-aos-delay="400">Regula humedad y condensación.</p>
     <p class="beneficio" data-aos="fade-up" data-aos-delay="500">Rápida instalación y excelente <br>
@@ -605,10 +629,7 @@ p{
   <section id="especificaciones">
     <h5 data-aos="fade-up">Especificaciones Técnicas</h5>
   
-    <div class="especificaciones-imgs">
-      <img src="img/FichaTec1.webp" alt="Ficha técnica parte 1" data-aos="fade-up" data-aos-delay="100">
-      <img src="img/FichaTec2.webp" alt="Ficha técnica parte 2" data-aos="fade-up" data-aos-delay="200">
-    </div>
+    
   
     <div class="boton-descarga" data-aos="fade-up" data-aos-delay="300">
       <a href="img/FichaTécnicaCelulosaProyectada.pdf" target="_blank" class="btn-pdf">Descargar ficha técnica en PDF</a>
