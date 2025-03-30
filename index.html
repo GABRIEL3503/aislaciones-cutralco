@@ -428,7 +428,7 @@ p{
 /* Logo fijo centrado en el hero */
 .logo-parallax {
   position: absolute;
-  bottom: 6%;
+  bottom: 14%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -437,7 +437,7 @@ p{
 
 /* Estilo del logo */
 .hero-logo {
-  width: 180px;
+  width: 200px;
   height: auto;
   animation: fadeIn 1.5s ease-in-out;
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -464,8 +464,7 @@ p{
 /* Corrección para navegación y paginación Swiper */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #fff;
-}
+display: none};
 
 .swiper-pagination-bullet {
   background: #fff;
@@ -537,8 +536,7 @@ p{
       <div class="swiper-pagination"></div>
   
       <!-- Flechas de navegación opcionales -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      
     </div>
   </section>
   
@@ -721,17 +719,14 @@ p{
   var swiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  
   });
 </script>
 
