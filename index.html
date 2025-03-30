@@ -9,469 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-        font-family: "Archivo", sans-serif;
-    }
-   /* Estilo para sección de beneficios */
-#beneficios {
-  background: url('img/fondo-1.jpg') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-/* Título */
-#beneficios h2 {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-/* Contenedor de cada beneficio */
-.beneficio {
-  display: flex
-;
-    flex-direction: column;
-    align-items: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  text-align: center;
-}
-
-/* Estilo para los íconos */
-.beneficio-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 12px;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Estilo para los párrafos de beneficios */
-.beneficio p {
-  font-size: 1.4rem;
-  line-height: 1.5;
-  font-weight: 900;
-  color: 3f3f3f;
-}
-
-/* Animación opcional para que los íconos aparezcan suavemente */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 20px;
-      background-color: #0744a4d4
-      ;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #f1f1f1;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #007bff;
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 25px;
-      height: 20px;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      height: 3px;
-      width: 100%;
-      background: #fcfcfc;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: #414141ed;
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        padding: 20px 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
-.logo img{
-    width: 190px;
-}
-    #scroll-down {
-        margin-top: 44px;
-      width: 48px;
-      height: 48px;
-      animation: bounce 2s infinite;
-      cursor: pointer;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    #que-es {
-  padding: 80px 20px;
-  text-align: center;
-  background: #fff;
-}
-
-#que-es h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #555;
-}
-
-#que-es h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 20px 0;
-  color: #1A1A1A;
-}
-#que-es{
-  background-color: #F8F8F8;
-}
-p{
-  color:  #4D4D4D ;
-}
-#beneficios p{
-  font-weight: 600;
-  color: #1A1A1A;
-}
-#que-es .contenido {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #444;
-}
-#propiedades {
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-#propiedades h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 60px;
-}
-
-.propiedad {
-  max-width: 800px;
-  margin: 0 auto 60px;
-}
-.contenido {
-  text-align: left    ;
-}
-.propiedad-img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
-.propiedad-texto p {
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 12px;
-}
-#beneficios p{
-  margin-bottom: 64px;
-}
-#como-se-aplica {
-  padding: 80px 20px;
-  text-align: center;
-  background: #fff;
-}
-
-#como-se-aplica h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 60px;
-}
-
-.como-bloque {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.como-img {
-  width: 100%;
-  border-radius: 6px;
-  margin: 20px 0;
-}
-
-.como-texto {
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.como-texto p {
-  margin-bottom: 14px;
-}
-#especificaciones {
-  padding: 80px 20px;
-  text-align: center;
-  background: #fff;
-}
-
-#especificaciones h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 60px;
-}
-
-.especificaciones-imgs img {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 30px;
-  border-radius: 6px;
-}
-
-.boton-descarga {
-  margin-top: 40px;
-}
-
-.btn-pdf {
-  display: inline-block;
-  background: #222;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-
-.btn-pdf:hover {
-  background: #444;
-}
-#resenas {
-  padding: 80px 20px;
-  text-align: center;
-  background: #fff;
-}
-
-#resenas h5 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-#resenas h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #222;
-}
-
-.resena-img img {
-  max-width: 600px;
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 40px;
-}
-
-.boton-resena {
-  margin-top: 10px;
-}
-
-.btn-resena {
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  padding: 14px 32px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-.btn-resena:hover {
-  background: #555;
-}
-/* Estilos generales del hero */
-#hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-/* Contenedor Swiper */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Wrapper y slides */
-.swiper-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Contenido del hero centrado */
-.hero-content {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  color: #fff;
-}
-
-/* Estilo de título */
-.hero-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-}
-
-/* Estilo de párrafo opcional */
-.hero-content p {
-  font-size: 1rem;
-}
-
-/* Logo fijo centrado en el hero */
-.logo-parallax {
-  position: absolute;
-  bottom: 14%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  text-align: center;
-}
-
-/* Estilo del logo */
-.hero-logo {
-  width: 200px;
-  height: auto;
-  animation: fadeIn 1.5s ease-in-out;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-/* Animación de aparición suave */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Efecto de zoom en el logo al hacer scroll */
-.scrolled .hero-logo {
-  transform: scale(0.9);
-  opacity: 0.8;
-}
-
-/* Corrección para navegación y paginación Swiper */
-.swiper-button-prev,
-.swiper-button-next {
-display: none};
-
-.swiper-pagination-bullet {
-  background: #fff;
-}
-
-
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -497,53 +35,50 @@ display: none};
   <section id="hero">
     <div class="logo-parallax">
       <img src="img/LogoBlancoSinFondo.png" alt="Logo" class="hero-logo">
+      
+      <!-- Flecha para hacer scroll hacia abajo -->
+      <img src="img/FlechaInicio.png" alt="Scroll Down" id="scroll-down" />
     </div>
   
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 30.webp');">
-          <div class="hero-content">
-          </div>
+          <div class="hero-content"></div>
         </div>
   
         <!-- Slide 2 -->
         <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 32.webp');">
-          <div class="hero-content">
-          </div>
+          <div class="hero-content"></div>
         </div>
   
         <!-- Slide 3 -->
         <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 33.webp');">
+          <div class="hero-content"></div>
+        </div>
+  
+        <!-- Slide 4 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 34.webp');">
+          <div class="hero-content"></div>
+        </div>
+  
+        <!-- Slide 5 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 35.webp');">
           <div class="hero-content">
+            <h2>Solución sustentable y reciclable</h2>
           </div>
         </div>
       </div>
-     <!-- Slide 3 -->
-     <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 34.webp');">
-      <div class="hero-content">
-      </div>
-    </div>
-       <!-- Slide 3 -->
-       <div class="swiper-slide hero-slide" style="background-image: url('img/Mesa\ de\ trabajo\ 35.webp.webp');">
-        <div class="hero-content">
-          <h2>Solución sustentable y reciclable</h2>
-        </div>
-      </div>
-    </div>
-  </div>
       <!-- Paginación -->
       <div class="swiper-pagination"></div>
-  
-      <!-- Flechas de navegación opcionales -->
-      
     </div>
   </section>
   
   
+  
 
   <section id="beneficios">
-    <h2 data-aos="fade-up">5 BENEFICIOS DE ELEGIR CELULOSA PROYECTADA</h2>
+    <h5 data-aos="fade-up">5 BENEFICIOS DE ELEGIR CELULOSA PROYECTADA</h5>
   
     <div class="beneficio" data-aos="fade-up" data-aos-delay="100">
       <img src="img/Ben1.png" alt="Ícono térmica" class="beneficio-icon">
@@ -570,7 +105,8 @@ display: none};
       <p>Rápida instalación y excelente <br> relación costo-beneficio.</p>
     </div>
   </section>
-  
+  <section id="parallax"></section>
+
   <section id="que-es">
     <h5 data-aos="fade-up">¿Qué es la celulosa proyectada</h5>
     <h2 data-aos="fade-up" data-aos-delay="100">Aislamiento de celulosa</h2>
