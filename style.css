@@ -163,16 +163,20 @@ font-size: 1rem;
 
 /* Logo fijo en Hero */
 .logo-parallax {
-position: absolute;
-bottom: 5%;
-left: 50%;
-transform: translateX(-50%);
-z-index: 10;
-text-align: center;
+    position: absolute;
+    display: flex
+;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-logo {
-width: 200px;
+width: 240px;
 height: auto;
 animation: fadeIn 1.5s ease-in-out;
 transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -233,7 +237,13 @@ padding: 80px 20px;
 background: #fff;
 text-align: center;
 }
-
+#beneficios h5{
+    text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 400;
+color: #555;
+margin-bottom: 60px;
+}
 #propiedades h5 {
 text-transform: uppercase;
 letter-spacing: 1px;
@@ -306,21 +316,29 @@ color: #555;
 margin-bottom: 60px;
 }
 
-.boton-descarga {
-margin-top: 40px;
-}
 
-.btn-pdf {
+
+.btn-pdf, .boton-resena {
 display: inline-block;
-background: #222;
+background: linear-gradient(to right, #4980CC, #0744A4);
+;
 color: #fff;
 text-decoration: none;
-padding: 14px 28px;
+padding: 14px 78px;
 border-radius: 4px;
 font-weight: 500;
 transition: background 0.3s;
 }
-
+.boton-resena{
+    color: white;
+    text-decoration: none;
+    margin-top: 40px;
+    padding: 14px 160px;
+}
+.btn-resena{
+    color: white;
+    text-decoration: none;
+}
 .btn-pdf:hover {
 background: #444;
 }
@@ -346,7 +364,8 @@ margin-bottom: 20px;
 font-size: 1.8rem;
 font-weight: 700;
 margin-bottom: 40px;
-color: #222;
+color: #0744A4
+;
 }
 
 .resena-img img {
@@ -355,7 +374,9 @@ width: 100%;
 border-radius: 6px;
 margin-bottom: 40px;
 }
-
+.icon{
+    width: 40px;
+}
 /* ================================
 🌄 SECCIÓN PARALLAX
 ================================ */
@@ -388,7 +409,8 @@ margin-bottom: 20px;
 font-size: 2rem;
 font-weight: 700;
 margin: 20px 0;
-color: #1A1A1A;
+color: #0744A4
+;
 }
 
 #que-es .contenido {
@@ -411,7 +433,64 @@ margin-bottom: 16px;
 color: #1A1A1A;
 font-weight: 700;
 }
-
+#contacto {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f8f8f8;
+  }
+  
+  #contacto h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 44px;
+  }
+  
+  .contacto-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .contacto-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contacto-link:hover {
+    color: #0744A4;
+  }
+  
+  .contacto-item i {
+    margin-right: 8px;
+    color: #0744A4;
+  }
+  
+  .visitanos {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0744A4;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .mapa-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
 /* ================================
 ✨ ANIMACIONES Y EFECTOS
 ================================ */
