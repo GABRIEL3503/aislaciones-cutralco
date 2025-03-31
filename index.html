@@ -255,15 +255,66 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.639148453602!2d-69.22862302477472!3d-38.93222457171662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960c68ef8f6a4ebb%3A0xc97d6b76517b77dc!2sPrincipal%20Saez%20%26%20Leandro%20N.%20Alem%2C%20Q8322%20Cutral%20Co%2C%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1743351251888!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
+ 
+  
+    <div id="footer">
+      <!-- Contenedor de la frase dinámica -->
+      <div class="frase-container">
+        <p id="frase" class="frase">Vos también podés digitalizarte</p>
+      </div>
+    
+      <!-- Botón Contactanos -->
+      <div class="boton-container">
+        <a href="https://linktr.ee/tu_link" target="_blank" class="btn-conocenos">Conocenos</a>
+      </div>
+    
+      <!-- Información del footer -->
+      <div class="footer-info">
+        <div class="logo-footer">
+          <img src="img/logo-footer.png" alt="Logo Octopus" />
+          <span><strong>CATÁLOGO</strong><span style="color: #ff4b4b;">DIGITAL</span></span>
+        </div>
+        <p>Todos los derechos reservados. Copyright 2025</p>
+        <div class="octopus">Octopus</div>
+      </div>
+    </div>
+    
+
+    
   
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+    const frases = [
+  "Vos también podés digitalizarte",
+  "Sumate a la comunidad Octopus",
+];
 
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('show');
-    });
+let fraseIndex = 0;
+const fraseElemento = document.getElementById("frase");
+
+function cambiarFrase() {
+  // Oculta la frase actual suavemente
+  fraseElemento.style.opacity = 0;
+  fraseElemento.style.transform = "translateX(-100%)";
+
+  setTimeout(() => {
+    // Cambia la frase después del tiempo de transición
+    fraseIndex = (fraseIndex + 1) % frases.length;
+    fraseElemento.textContent = frases[fraseIndex];
+
+    // Restablece la posición para la nueva frase desde la derecha
+    fraseElemento.style.transform = "translateX(100%)";
+
+    setTimeout(() => {
+      // Muestra la nueva frase entrando desde la derecha
+      fraseElemento.style.opacity = 1;
+      fraseElemento.style.transform = "translateX(0)";
+    }, 50);
+  }, 1000); // Tiempo de espera antes de cambiar la frase
+}
+
+// Inicia el carrusel de frases
+setInterval(cambiarFrase, 4000); // Tiempo total para cambiar frase (4 segundos)
+
 
     document.getElementById('scroll-down').addEventListener('click', () => {
       document.getElementById('beneficios').scrollIntoView({ behavior: 'smooth' });
