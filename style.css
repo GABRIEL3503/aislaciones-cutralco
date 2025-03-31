@@ -492,7 +492,7 @@ font-weight: 700;
   }
   /* Estilos del footer */
 #footer {
-  background-color: #1a1a1a;
+  background-color: #262626;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -509,12 +509,13 @@ font-weight: 700;
 
 /* Estilos para las frases */
 .frase {
-  font-size: 1.8rem;
+  color: #FDFFFF;
+  font-size: 1.3rem;
   font-weight: 600;
   white-space: nowrap;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 8%;
   transform: translateX(-50%);
   opacity: 1;
   transition: transform 0.8s ease, opacity 0.8s ease;
@@ -559,7 +560,7 @@ font-weight: 700;
 }
 
 .logo-footer img {
-  width: 40px;
+  width: 224px;
   height: auto;
 }
 
@@ -634,3 +635,8 @@ display: none;
 .swiper-pagination-bullet {
 background: #fff;
 }
+@media (min-width: 1024px){
+  .frase {
+    left: 33%;
+    font-size: 1.9rem;
+}}
