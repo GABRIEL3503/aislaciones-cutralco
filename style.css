@@ -214,7 +214,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 max-width: 800px;
-margin: 0 auto 40px;
+margin: 0 auto 72px;
 text-align: center;
 }
 
@@ -342,8 +342,14 @@ transition: background 0.3s;
     color: white;
     text-decoration: none;
 }
+
+.btn-resena:hover{
+  background: #4980CC;
+}
+
+
 .btn-pdf:hover {
-background: #444;
+background: #4980CC;
 }
 
 /* ================================
@@ -360,7 +366,7 @@ text-transform: uppercase;
 letter-spacing: 1px;
 font-weight: 400;
 color: #555;
-margin-bottom: 20px;
+margin-bottom: 60px;
 }
 
 #resenas h2 {
@@ -407,13 +413,13 @@ text-transform: uppercase;
 letter-spacing: 1px;
 font-weight: 400;
 color: #555;
-margin-bottom: 20px;
+margin-bottom: 60px;
 }
 
 #que-es h2 {
 font-size: 2rem;
 font-weight: 700;
-margin: 20px 0;
+margin: 32px 0;
 color: #0744A4
 ;
 }
