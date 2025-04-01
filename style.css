@@ -511,12 +511,11 @@ font-weight: 700;
 /* Estilos para las frases */
 .frase {
   color: #FDFFFF  ;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 400;
   white-space: nowrap;
   position: absolute;
   top: 0;
-  left: 2%;
   transform: translateX(-50%);
   opacity: 1;
   transition: transform 0.8s ease, opacity 0.8s ease;
@@ -530,7 +529,7 @@ font-weight: 700;
 /* Estilo del botón Contactanos */
 .btn-conocenos {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 8px 12px;
   font-size: 1.2rem;
   font-weight: 600;
   background: linear-gradient(90deg, #8537EE , #E24FE4);
@@ -568,7 +567,7 @@ font-weight: 700;
 
 /* Texto de derechos reservados */
 .footer-info p {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   font-weight: 400;
   color: #FDFFFF;
 }
@@ -648,3 +647,34 @@ background: #fff;
 .btn-conocenos {
   display: inline-block;
   padding: 10px 148px;}}
+  /* Botón flotante de WhatsApp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo de WhatsApp dentro del botón */
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Efecto hover */
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
