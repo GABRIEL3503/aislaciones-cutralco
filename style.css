@@ -3,6 +3,9 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
 font-family: "Archivo", sans-serif;
@@ -115,7 +118,7 @@ overflow: hidden;
 
 .swiper-container {
 width: 100%;
-height: 94%;
+height: 84%;
 overflow: hidden;
 position: relative;
 }
@@ -166,7 +169,7 @@ font-size: 1rem;
     position: absolute;
     display: flex
 ;
-    bottom: 12%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -367,7 +370,9 @@ margin-bottom: 40px;
 color: #0744A4
 ;
 }
-
+.ubi{
+  margin-right: 4px;
+}
 .resena-img img {
 max-width: 600px;
 width: 100%;
@@ -375,7 +380,7 @@ border-radius: 6px;
 margin-bottom: 40px;
 }
 .icon{
-    width: 40px;
+    width: 32px;
 }
 /* ================================
 🌄 SECCIÓN PARALLAX
@@ -457,6 +462,7 @@ font-weight: 700;
   }
   
   .contacto-link {
+    padding: 12px 0px 32px;
     text-decoration: none;
     color: #333;
     font-size: 1.2rem;
@@ -479,7 +485,7 @@ font-weight: 700;
     font-weight: 700;
     color: #0744A4;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .mapa-container iframe {
