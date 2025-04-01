@@ -492,6 +492,7 @@ font-weight: 700;
   }
   /* Estilos del footer */
 #footer {
+  font-family: "Nunito Sans", sans-serif;
   background-color: #262626;
   color: #fff;
   padding: 40px 20px;
@@ -509,13 +510,13 @@ font-weight: 700;
 
 /* Estilos para las frases */
 .frase {
-  color: #FDFFFF;
+  color: #FDFFFF  ;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 400;
   white-space: nowrap;
   position: absolute;
   top: 0;
-  left: 8%;
+  left: 2%;
   transform: translateX(-50%);
   opacity: 1;
   transition: transform 0.8s ease, opacity 0.8s ease;
@@ -523,7 +524,7 @@ font-weight: 700;
 
 /* Contenedor del botón Contactanos */
 .boton-container {
-  margin: 20px 0;
+  margin: 12px 0;
 }
 
 /* Estilo del botón Contactanos */
@@ -531,8 +532,9 @@ font-weight: 700;
   display: inline-block;
   padding: 14px 28px;
   font-size: 1.2rem;
-  background: linear-gradient(90deg, #8e2de2, #ff4b4b);
-  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(90deg, #8537EE , #E24FE4);
+  color: #FDFFFF;
   text-decoration: none;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -567,21 +569,22 @@ font-weight: 700;
 /* Texto de derechos reservados */
 .footer-info p {
   font-size: 0.9rem;
-  color: #ccc;
+  font-weight: 400;
+  color: #FDFFFF;
 }
 
 /* Estilo de marca Octopus */
 .octopus {
   font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 700;
+  color: #FDFFFF;
 }
 
 /* Media query para ajustar en pantallas pequeñas */
 @media (max-width: 768px) {
   .footer-info {
     flex-direction: column;
-    gap: 15px;
+    gap: 4px;
     text-align: center;
   }
 
@@ -636,7 +639,12 @@ display: none;
 background: #fff;
 }
 @media (min-width: 1024px){
+  .octopus {
+    margin-left: 80px;}
   .frase {
     left: 33%;
     font-size: 1.9rem;
-}}
+}
+.btn-conocenos {
+  display: inline-block;
+  padding: 10px 148px;}}
