@@ -330,10 +330,10 @@ font-weight: 500;
 transition: background 0.3s;
 }
 .boton-resena{
+  width: 330px;
     color: white;
     text-decoration: none;
     margin-top: 40px;
-    padding: 14px 160px;
 }
 .btn-resena{
     color: white;
