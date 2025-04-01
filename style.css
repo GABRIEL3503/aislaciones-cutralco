@@ -505,7 +505,7 @@ font-weight: 700;
   height: 50px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 /* Estilos para las frases */
@@ -545,7 +545,7 @@ font-weight: 700;
 
 /* Información del footer */
 .footer-info {
-  margin-top: 30px;
+  margin-top: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
