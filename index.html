@@ -294,6 +294,13 @@
     
   
   <script>
+    const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('open'); // opcional si quieres animar el ícono
+  });
     const frases = [
   "Vos también podés digitalizarte",
   "Sumate a la Comunidad Octopus",

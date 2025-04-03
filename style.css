@@ -691,3 +691,31 @@ background: #fff;
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+/* Estilo base (oculto en mobile) */
+
+/* #nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  width: 200px;
+  z-index: 1000;
+} */
+
+/* Mostrar al hacer toggle */
+#nav-links.active {
+  display: flex;
+}
+
+/* Si quieres animar el ícono hamburguesa */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
