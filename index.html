@@ -273,15 +273,15 @@
       <div class="boton-container">
         <a href="https://linktr.ee/octopus.solucionesdigitales" target="_blank" class="btn-conocenos">Conocenos</a>
       </div>
-    
+<img class="logotip" src="img/LogotipoOctopusHorizontal.png" alt="">
       <!-- Información del footer -->
       <div class="footer-info">
         <div class="logo-footer">
-          <img src="img/LogoCatálogoFooter.png" alt="Logo Octopus" />
+          <img src="img/CatDigLogoHor.png" alt="Logo Octopus" />
         </div>
-        <div class="octopus">Octopus</div>
+        <p>Todos los derechos reservados. © 2025</p>
 
-        <p>Todos los derechos reservados. Copyright 2025</p>
+
       </div>
     </div>
     <!-- Botón flotante de WhatsApp -->
@@ -294,6 +294,7 @@
     
   
   <script>
+    
     const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
 
@@ -355,6 +356,20 @@ setInterval(cambiarFrase, 4000); // Tiempo total para cambiar frase (4 segundos)
     },
   
   });
+  window.addEventListener('scroll', () => {
+    const footer = document.getElementById('footer');
+    const btn = document.querySelector('.whatsapp-btn'); // Usamos clase en lugar de ID
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (footerRect.top < windowHeight) {
+      btn.classList.add('footer-visible');
+    } else {
+      btn.classList.remove('footer-visible');
+    }
+  });
+</script>
+
 </script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
