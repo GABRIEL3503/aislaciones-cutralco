@@ -109,8 +109,16 @@
       <p>Rápida instalación y excelente <br> relación costo-beneficio.</p>
     </div>
   </section>
-  <section id="parallax"></section>
-
+  <div class="video-container">
+    <video
+      src="img/video.mp4"
+      muted
+      playsinline
+      preload="auto"
+      class="autoplay-on-visible"
+    ></video>
+  </div>
+  
   <section id="que-es">
     <h5 data-aos="fade-up">Qué es la celulosa proyectada</h5>
     <h2 data-aos="fade-up" data-aos-delay="100">Aislamiento de celulosa</h2>
@@ -310,7 +318,7 @@
 let fraseIndex = 0;
 const fraseElemento = document.getElementById("frase");
 
-function cambiarFrase() {A
+function cambiarFrase() {
   // Oculta la frase actual suavemente
   fraseElemento.style.opacity = 0;
   fraseElemento.style.transform = "translateX(-100%)";
@@ -344,6 +352,21 @@ setInterval(cambiarFrase, 4000); // Tiempo total para cambiar frase (4 segundos)
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+    if (entry.isIntersecting) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.autoplay-on-visible').forEach(video => {
+  observer.observe(video);
+});
+
   var swiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay: {

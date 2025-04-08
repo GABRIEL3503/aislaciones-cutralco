@@ -83,9 +83,18 @@ opacity: 0;
 .menu-toggle.active span:nth-child(3) {
 transform: rotate(-45deg) translate(5px, -5px);
 }
-
+.video-container video {
+  width: 60%;
+  height: auto;
+  display: block;
+}
 /* Estilos responsivos para navbar */
 @media (max-width: 768px) {
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 nav ul {
  position: absolute;
  top: 70px;
@@ -518,7 +527,7 @@ font-weight: 700;
   display: flex
   ;
       justify-content: center;
-      height: 180px;
+      height: 40px;
       overflow: hidden;
       position: relative;
       margin-bottom: 8px;
@@ -726,3 +735,15 @@ background: #fff;
 .menu-toggle.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+.video-container {
+  display: flex
+  ;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 12px;
+      justify-content: center;
+}
+
+
