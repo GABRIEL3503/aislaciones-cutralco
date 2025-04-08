@@ -299,10 +299,38 @@
 </a>
 
 
-    
+<div id="loader">
+  <div class="loading-gif"> 
+      <img class="flip-in-ver-left  pic" src="img/Pictograma.png" alt="Loader Icon">
+  </div>
+  <span>
+  <img class="app-logo" src="img/LogoCatalogo para loader.png" alt="App Logo">
+  <div class="progress-bar">
+      <div class="progress"></div>
+  </div>
+  <img class="img-load" src="img/Octopus loader.png" alt="Extra Loader Image">
+</span>
+</div>
   
   <script>
-    
+      setTimeout(() => {
+    document.getElementById('loader').classList.add('hide-loader');
+
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none'; // Oculta completamente el loader
+    }, 1000);
+
+    // Mostrar el contenido de la app de forma gradual
+    document.querySelector('.container').style.opacity = '1';
+    document.querySelector('footer').style.opacity = '1';
+
+    // Si el anuncio ya está precargado, mostrarlo inmediatamente
+    setTimeout(() => {
+      if (announcementData) {
+        showAnnouncementPopup(announcementData);
+      }
+    }, 400);
+  }, 2800);
     const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
 
