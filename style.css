@@ -748,3 +748,6 @@ nav ul.show {
  display: flex;
 }
 }
+.boton-resena:hover {
+  background: #4980CC;
+}
