@@ -89,32 +89,7 @@ transform: rotate(-45deg) translate(5px, -5px);
   display: block;
 }
 /* Estilos responsivos para navbar */
-@media (max-width: 768px) {
-  .video-container video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-nav ul {
- position: absolute;
- top: 70px;
- right: 0;
- background-color: #414141ed;
- flex-direction: column;
- width: 100%;
- display: none;
- padding: 20px 20px;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-nav ul.show {
- display: flex;
-}
-
-.menu-toggle {
- display: flex;
-}
-}
 
 /* ================================
 🎥 HERO Y SWIPER
@@ -747,3 +722,29 @@ background: #fff;
 }
 
 
+@media (max-width: 768px) {
+  .video-container video {
+    width: 80%;
+        height: auto;
+        display: block;
+  }
+nav ul {
+ position: absolute;
+ top: 70px;
+ right: 0;
+ background-color: #414141ed;
+ flex-direction: column;
+ width: 100%;
+ display: none;
+ padding: 20px 20px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul.show {
+ display: flex;
+}
+
+.menu-toggle {
+ display: flex;
+}
+}
